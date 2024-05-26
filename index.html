@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CoDe</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="text/js" href="./script/script.js">
+    <link rel="text/js" href="./script/modal.js">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=fb922f02-a162-4216-a5e2-e9d39bfb498b&lang=ru_RU" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.css"/>
+</head>
+<body>
+    <header class="header">
+        <nav class="header__nav">
+          <a href="#" class="logo"><img src="./image/CoDe_logo.svg" alt="CoDe logo"></a>
+            <ul class="menu">
+                <li class="menu__item"><a class="list__item" href="#">Чему вы научитесь</a></li>
+                <li class="menu__item"><a class="list__item" href="#">Процесс обучения</a></li>
+                <li class="menu__item"><a class="list__item" href="#">Стоимость</a></li>
+                <li class="menu__item"><a class="list__item" href="#">Контакты</a></li>
+            </ul>
+            <a href="#" class="nav__phone">+7 (499) 348 93 96</a>
+            <button id="menu-toggle" class="hidden"></button>
+            <div>
+                <div id="modal-menu" class="hidden">
+                    <ul class="modal-menu">
+                        <button id="close-menu">❌</button>
+                        <li class="modal__list"><a class="modal__item" href="#">Чему вы научитесь</a></li>
+                        <li class="modal__list"><a class="modal__item" href="#">Процесс обучения</a></li>
+                        <li class="modal__list"><a class="modal__item" href="#">Стоимость</a></li>
+                        <li class="modal__list"><a class="modal__item" href="#">Контакты</a></li>
+                        <li class="modal__list"><a class="modal__item" href="#">Регистрация</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+    <section>
+    <div class="swiper">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="hero">
+                <div class="hero__title">
+                  <h2 class="h__title">Школа <span>{</span><span>программирования</span><span>}</span> для тех, кому нужны реальные навыки,<span>а не просто сертификат</span></h2>
+                  <div class="hero__line"></div>
+                  <p class="hero__descr">Закажите звонок, и наш специалист свяжется с вами в ближайшее время</p>
+                  <button id="modal-button-1" class="hero__btn btn__img">Заказать звонок</button>
+                </div>
+                <img class="hero__img" src="./image/banner1.svg" alt="banner1">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero">
+                <div class="hero__title2">
+                  <h2 class="h__title">Обучение</br>через практику</h2>
+                  <div class="hero__line"></div>
+                  <p class="hero__descr2">Всё, что вы узнали, вы тут же начинаете применять на практике. Вы сразу видите результаты своего труда.</p>
+                  <button id="modal-button-2" class="hero__btn btn__img">Заказать звонок</button>
+                </div>
+                <img class="hero__img2" src="./image/banner2.svg" alt="banner1">
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="hero">
+                <div class="hero__title3">
+                  <h2 class="h__title3">Весь материал разбит на небольшие уроки</h2>
+                  <div class="hero__line"></div>
+                  <p class="hero__descr3">Теория и практика подаются маленькими порциями. Так вам будет легче усваивать новые знания.</p>
+                  <button id="modal-button-3" class="hero__btn btn__img">Заказать звонок</button>
+                </div>
+                <img class="hero__img3" src="./image/banner3.svg" alt="banner1">
+              </div>
+            </div>
+          </div>          
+        <!-- If we need navigation buttons -->
+        <div class="swiper-button-next">
+            <img class="swiper-button-next-image" src="./image/btn-next.svg" alt="">
+        </div>
+        <div class="swiper-button-prev">
+            <img class="swiper-button-prev-image" src="./image/btn-prev.svg" alt="">
+        </div>
+        <div id="modal" class="hidden">
+            <div class="modal__content">
+            <button id="close-modal" class="close__btn"></button>
+              <h1 class="modal__title">Заказать звонок</h1>
+              <form class="modal__form">
+                <label>Имя:</label>
+                <input type="text" placeholder="Иван">
+
+                <label>Телефон:</label>
+                <input type="phone" placeholder="+70000000000">
+
+                <label>Email:</label>
+                <input type="email" placeholder="info@info.ru">
+
+                <label for="message">Сообщение:</label>
+                <textarea placeholder="Ваше сообщение.."></textarea>
+
+                <p>Нажимая кнопку “Отправить”,  соглашаюсь с <a href="">политикой конфидениальности</a></p>
+
+                <button class="hero__btn btn__img" type="submit">Отправить</button>
+              </form>
+            </div>
+        </div>
+        <script src="./script/script.js"></script>
+    </div>
+    </section>
+    <section class="education">
+        <h2 class="edu__title">Обучение в CoDe – это удобно и результативно</h2>
+        <div class="education__block">
+            <div class="edu__descr">
+                <img class="edu__img1st" src="./image/edu-1.svg" alt="edu-1">
+                <h3 class="edu__h1st">Огромное</br>количество практики</h3>
+                <p class="edu__p1st">Более 500 самостоятельных заданий и 20 полноценных больших проектов</p>
+            </div>
+            <div class="edu__descr">
+                <img class="edu__img1st" src="./image/edu-2.svg" alt="edu-2">
+                <h3 class="edu__h1st">Современные методики обучения</h3>
+                <p class="edu__p1st">Спиральное обучение: погружаемся в материал постепенно, виток за витком</p>
+            </div>
+            <div class="edu__descr">
+                <img class="edu__img1st edu__i1" src="./image/edu-3.svg" alt="">
+                <h3 class="edu__h1st">Простое и понятное изложение</h3>
+                <p class="edu__p1st">Вместо заумных терминов – примеры из реального мира</p>
+            </div>
+            <div class="edu__descr">
+                <img class="edu__img1st edu__i2" src="./image/edu-4.svg" alt="">
+                <h3 class="edu__h1st">Гибкий график занятий</h3>
+                <p class="edu__p1st">Учитесь в любое время в удобном для вас темпе</p>
+            </div>
+            <div class="edu__descr">
+                <img class="edu__img2st edu__i3" src="./image/edu-5.svg" alt="">
+                <h3 class="edu__h2st">Прямая связь с опытными программистами</h3>
+                <p class="edu__p1st">Задавайте вопросы и отправляйте свой код на проверку</p>
+            </div>
+            <div class="edu__descr">
+                <img class="edu__img2st" src="./image/edu-6.svg" alt="">
+                <h3 class="edu__h2st">Оплата небольшими частями</h3>
+                <p class="edu__p1st">Платите только за тот материал, который сейчас изучаете, а не за весь курс сразу</p>
+            </div>
+            <div class="edu__descr">
+                <div class="mobile">
+                    <img class="edu__img2st" src="./image/edu-7.svg" alt="">
+                <div>
+                <h3 class="edu__h2st">Быстрый и легкий <span class="h2st__p">возврат</span></h3>
+                <p class="edu__p1st">Если передумаете учиться – вернем деньги за 3 рабочих дня</p>
+            </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    <section class="help__metod">
+        <div class="edu__help">
+            <div class="help__block">
+                <img class="h__img" src="./image/edu-h1.svg" alt="">
+                <div class="h__descr">
+                    <h2 class="descr__h2">Помощь и поддержка</h2>
+                    <p class="descr__p1">Если в процессе обучения возникнут сложности, вы всегда сможете задать вопрос своему наставнику.</p>
+                    <p class="descr__p2">Раз в несколько уроков вы будете получать большое задание, которое нужно будет сдавать на проверку код-ревьюеру. Он внимательно изучит ваш код, найдет ошибки и поможет вам стать лучше. </p>
+                </div>
+            </div>
+            <div class="edu__metod">
+                <div class="metod__block">
+                    <div class="metod__descr">
+                        <h2 class="metod__h2">Методика обучения</h2>
+                        <p class="metod__p">Весь учебный материал структурирован по принципу «спирального обучения». Сначала вы получаете базовые знания, а затем на каждом витке спирали углубляетесь в изученные темы, доводя их понимание до совершенства. Такой подход упрощает обучение и гарантирует, что вы не пропустите ничего важного.</p>
+                    </div>
+                    <img class="metod__img" src="./image/edu-m.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="gallery">
+        <div class="grid__gallery">
+          <div class="gallery__lg">
+            <a data-fancybox="gallery" data-src="./image/gallery-1.svg">
+              <img class="bl1" src="./image/gallery-1.svg" alt="">
+            </a>
+          </div>
+          <div class="gallery__rg">
+            <a data-fancybox="gallery" href="./image/gallery-2.svg">
+              <img src="./image/gallery-2.svg" alt="">
+            </a>
+            <a data-fancybox="gallery" href="./image/gallery-3.svg">
+              <img src="./image/gallery-3.svg" alt="">
+            </a>
+            <a data-fancybox="gallery" href="./image/gallery-4.svg">
+              <img src="./image/gallery-4.svg" alt="">
+            </a>
+            <a data-fancybox="gallery" href="./image/gallery-5.svg">
+              <img src="./image/gallery-5.svg" alt="">
+            </a>
+          </div>
+          <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@5.0/dist/fancybox/fancybox.umd.js"></script>
+          <script>
+            Fancybox.bind('[data-fancybox]', {
+            });    
+          </script>
+        </div>
+      </section>      
+    <section class="map">
+        <div id="api-maps"></div>
+        <script src="./script/script.js"></script>
+    </section>
+    <section class="info">
+        <div class="block">
+        <div class="info__blocklg">
+            <a href="#"><img class="info__logo" src="./image/CoDe_logo.svg" alt="logo"></a>
+            <p class="info__name">Школа программирования</p>
+        </div>
+        <div class="info__icon">
+            <img src="./image/inst.svg" alt="">
+            <img src="./image/vk.svg" alt="">
+            <img src="./image/facebook.svg" alt="">
+            <img src="./image/youtube.svg" alt="">
+        </div>
+        </div>
+
+
+
+        <div class="info__blockcr">
+            <p class="info__nav"><a class="info__link" href="">Чему вы научитесь</a></p>
+            <p class="info__nav"><a class="info__link" href="">Процесс обучения</a></p>
+            <p class="info__nav"><a class="info__link" href="">Стоимость</a></p>
+            <p class="info__nav"><a class="info__link" href="">Контакты</a></p>
+            <p class="info__nav"><a class="info__link" href="">Регистрация</a></p>
+        </div>
+
+
+        <div class="info__blockrg">
+            <a class="info__phone" href="">+7 (999) 999 99 99</a>
+            <a class="info__email" href="">info@code.ru</a>
+        </div>
+    </section>
+    </main>
+    <footer class="footer">
+        <div class="footer__line"></div>
+        <div class="footer__info">
+            <p class="footer__cop">© 2023 — Все права защищены</p>
+            <a class="footer__user" href="#">Пользовательское соглашение</a>
+            <a class="footer__pol" href="#">Политика конфиденциальности</a>
+        </div>
+    </footer>
+</body>
+</html>
